@@ -1,0 +1,40 @@
+.partners-section {
+  padding: 70px 5%;
+  background: #080808;
+  text-align: center;
+}
+
+.partners-section .section-title {
+  color: white;
+  margin-bottom: 30px;
+  font-size: 2.3rem;
+}
+
+.logo-slider {
+  display: flex;
+  overflow: hidden;
+  gap: 40px;
+  position: relative;
+}
+
+.logos {
+  display: flex;
+  gap: 50px;
+  animation: scroll 18s linear infinite;
+}
+
+.logos img {
+  height: 60px;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.logos img:hover {
+  opacity: 1;
+  transform: scale(1.12);
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}

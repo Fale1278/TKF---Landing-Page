@@ -1,0 +1,246 @@
+/* SECTION WRAPPER */
+.courses-upgraded {
+  padding: 90px 6%;
+  background: #000000;
+  min-height: 100vh;
+  animation: fadeIn 0.9s ease;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+  /* text-shadow: 0 0 18px rgba(0, 200, 255, 0.3); */
+}
+
+.header p {
+  color: #b1b1b1;
+  margin-top: 8px;
+}
+
+/* CATEGORY TABS */
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 10px 20px;
+  background: #080808;
+  border: 1px solid #ffad6a;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tab:hover {
+  border-color: #ffad6a;
+  background: #ffad6a;
+}
+
+.tab.active {
+  background: #ffad6a;
+  border-color: #ffad6a;
+  box-shadow: 0 5px 30px rgba(255, 206, 70, 0.4);
+}
+
+/* SEARCH BAR */
+.course-controls {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.course-controls input {
+  width: 360px;
+  padding: 15px;
+  border-radius: 15px;
+  background: #080808;
+  border: 1px solid #ffad6a;
+  color: white;
+  transition: 0.3s;
+}
+
+.course-controls input:focus {
+  border-color: #080808;
+  box-shadow: 0 5px 30px rgba(255, 206, 70, 0.4);
+}
+
+/* GRID */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 35px;
+}
+
+/* CARD */
+.course-card {
+  background: linear-gradient(145deg, #080808, #141414);
+  border-radius: 18px;
+  /* border: 1px solid #ffad6a; */
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.35s;
+}
+
+.course-card.enhanced:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: #ffad6a;
+  box-shadow: 0 5px 30px rgba(255, 206, 70, 0.4);
+}
+
+/* IMAGE */
+.course-img img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: 0.35s;
+}
+
+.course-card:hover img {
+  transform: scale(1.1);
+}
+
+/* TEXT */
+.course-body {
+  padding: 20px;
+}
+
+.course-body h2 {
+  color: white;
+  font-size: 1.3rem;
+}
+
+.desc {
+  color: #cccccc;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+/* META TAGS */
+.meta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.meta span {
+  background: rgba(255, 206, 70, 0.4);
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: #ffffff;
+  border: 1px solid #ffad6a;
+}
+
+/* APPLY BUTTON */
+.apply-btn {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 10px 15px;
+  background: #ffad6a;
+  color: white;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.apply-btn:hover {
+  background: #000000;
+}
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.4s ease;
+}
+
+.modal {
+  background: #000000;
+  padding: 30px;
+  width: 460px;
+  border-radius: 20px;
+  border: 1px solid #ffad6a;
+  position: relative;
+  animation: slideUp 0.4s ease;
+}
+
+.modal-img {
+  width: 100%;
+  height: 220px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.modal h2 {
+  color: white;
+  margin-top: 20px;
+}
+
+.modal p {
+  color: #cccccc;
+  margin-top: 10px;
+}
+
+.meta-modal {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.meta-modal span {
+  background: rgba(255, 206, 70, 0.4);
+  padding: 7px 14px;
+  border-radius: 8px;
+  color: #ffffff;
+  border: 1px solid #ffad6a;
+}
+
+.modal-apply {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #ffad6a;
+  border-radius: 12px;
+  color: white;
+}
+
+.close-btn {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
+  .modal {
+    width: 92%;
+  }
+}

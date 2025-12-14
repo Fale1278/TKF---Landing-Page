@@ -1,0 +1,26 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Smooth font rendering */
+body {
+  font-family: "Inter", sans-serif;
+  background: #000000;
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Global link reset */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Universal transition for smooth animations */
+* {
+  transition: 0.2s ease-in-out;
+}
